@@ -11,11 +11,16 @@ FED-next/.next/
 # Next.js cache
 .swp/
 .swc/
+FED-next/.swp/
+FED-next/.swc/
 
 # Env files
 .env
 .env.local
 .env.*.local
+FED-next/.env
+FED-next/.env.local
+FED-next/.env.*.local
 
 # Logs
 npm-debug.log*
