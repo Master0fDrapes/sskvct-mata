@@ -1,11 +1,31 @@
+# macOS system files
 .DS_Store
+
+# Node dependencies
 node_modules/
+
+# Next.js build output
 .next/
-.swc/
-.*.env
-FED-next/package-lock.json
-.DS_Store
-.DS_Store
 FED-next/.next/
 
-.next/
+# Next.js cache
+.swp/
+.swc/
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Lock file (if you don’t want it in Git)
+FED-next/package-lock.json
+
+# Optional: editor/IDE settings
+.vscode/
+.idea/
