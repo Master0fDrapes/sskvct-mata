@@ -6,3 +6,6 @@ node_modules/
 FED-next/package-lock.json
 .DS_Store
 .DS_Store
+FED-next/.next/
+
+.next/
