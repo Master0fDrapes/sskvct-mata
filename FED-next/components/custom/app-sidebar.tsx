@@ -9,6 +9,7 @@ import {
   Frame,
   GalleryVerticalEnd,
   Map,
+  Atom,
   PieChart,
   Settings2,
   SquareTerminal,
@@ -29,8 +30,8 @@ import { TeamSwitcher } from "./team-switcher";
 // This is sample data.
 const data = {
   user: {
-    name: "SSKVCT",
-    email: "m@example.com",
+    name: "VINAY",
+    email: "vinay@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
   teams: [
@@ -52,63 +53,52 @@ const data = {
   ],
   navMain: [
     {
-      title: "Chats / Messages",
-      url: "#",
+      title: "Create Proposals",
+      url: "/create-proposal",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "History",
-          url: "#",
+          title: "Create Proposal",
+          url: "/create-proposal",
         },
         {
-          title: "Starred",
-          url: "#",
+          title: "View All Proposals",
+          url: "/proposals",
         },
         {
-          title: "Settings",
-          url: "#",
+          title: "View Your Proposals",
+          url: "/proposals",
         },
       ],
     },
     {
-      title: "Voting participantes",
-      url: "#",
-      icon: Bot,
+      title: "Add Member",
+      url: "",
+      icon: SquareTerminal,
+      isActive: false,
       items: [
         {
-          title: "Voting participantes 1",
-          url: "#",
+          title: "New Member",
+          url: "/create-member",
         },
         {
-          title: "Voting participantes 2",
-          url: "#",
-        },
-        {
-          title: "Voting participantes 3",
-          url: "#",
+          title: "Remove Member",
+          url: "/remove-member",
         },
       ],
     },
     {
-      title: "Documentation",
+      title: "Donnate for a cause",
       url: "#",
       icon: BookOpen,
       items: [
         {
-          title: "Introduction",
+          title: "Create cause",
           url: "#",
         },
         {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
+          title: "View all couse",
           url: "#",
         },
       ],
@@ -119,19 +109,7 @@ const data = {
       icon: Settings2,
       items: [
         {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
+          title: "Profile",
           url: "#",
         },
       ],
@@ -139,19 +117,19 @@ const data = {
   ],
   projects: [
     {
-      name: "Donations from HSR",
+      name: "Purchasing Land",
       url: "#",
-      icon: Frame,
+      icon: Atom,
     },
     {
-      name: "Donations from BTM",
+      name: "Campaigning for gurukula academy",
       url: "#",
-      icon: PieChart,
+      icon: Atom,
     },
     {
-      name: "Traveling to Mumbai",
+      name: "Raising Fund for Swimming pool",
       url: "#",
-      icon: Map,
+      icon: Atom,
     },
   ],
 };

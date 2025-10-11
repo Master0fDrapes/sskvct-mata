@@ -1,3 +1,5 @@
+"use client";
+
 import { IconTrendingDown, IconTrendingUp } from "@tabler/icons-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -10,92 +12,406 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+import Autoplay from "embla-carousel-autoplay";
+
 export function SectionCards() {
   return (
     <div className=" mt-8 lg:px-8 px-4 !flex !flex-wrap w-full justify-between">
-      <Card className="@container/card lg:max-w-[49%] w-full my-3 border-[#0d3486]">
-        <CardHeader>
-          <CardDescription>Total Revenue</CardDescription>
-          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            $1,250.00
-          </CardTitle>
-          <CardAction>
-            <Badge variant="outline" className="bg-[#0d3486] text-white">
-              <IconTrendingUp />
-              +12.5%
-            </Badge>
-          </CardAction>
-        </CardHeader>
-        <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
-            Trending up this month <IconTrendingUp className="size-4" />
-          </div>
-          <div className="text-muted-foreground">
-            Visitors for the last 6 months
-          </div>
-        </CardFooter>
+      <Card className="@container/card lg:max-w-[24%] w-full my-3 border-[#0d3486]">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 3000,
+            }),
+          ]}
+        >
+          <CarouselContent>
+            <CarouselItem>
+              <>
+                <CardHeader>
+                  <CardDescription>Recent Proposals</CardDescription>
+                  <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+                    12 hours ago
+                  </CardTitle>
+                  <CardAction>
+                    <Badge
+                      variant="outline"
+                      className="bg-[#0d3486] text-white"
+                    >
+                      <IconTrendingUp />
+                      +12.5%
+                    </Badge>
+                  </CardAction>
+                </CardHeader>
+                <CardFooter className="flex-col items-start gap-1.5 text-sm">
+                  <div className="line-clamp-1 flex gap-2 font-medium">
+                    Trending up this month <IconTrendingUp className="size-4" />
+                  </div>
+                  <div className="text-muted-foreground">
+                    Visitors for the last 6 months
+                  </div>
+                </CardFooter>
+              </>
+            </CarouselItem>
+            <CarouselItem>
+              <>
+                <CardHeader>
+                  <CardDescription>Recent Proposals</CardDescription>
+                  <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+                    12 hours ago
+                  </CardTitle>
+                  <CardAction>
+                    <Badge
+                      variant="outline"
+                      className="bg-[#0d3486] text-white"
+                    >
+                      <IconTrendingUp />
+                      +12.5%
+                    </Badge>
+                  </CardAction>
+                </CardHeader>
+                <CardFooter className="flex-col items-start gap-1.5 text-sm">
+                  <div className="line-clamp-1 flex gap-2 font-medium">
+                    Trending up this month <IconTrendingUp className="size-4" />
+                  </div>
+                  <div className="text-muted-foreground">
+                    Visitors for the last 6 months
+                  </div>
+                </CardFooter>
+              </>
+            </CarouselItem>
+            <CarouselItem>
+              <>
+                <CardHeader>
+                  <CardDescription>Recent Proposals</CardDescription>
+                  <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+                    12 hours ago
+                  </CardTitle>
+                  <CardAction>
+                    <Badge
+                      variant="outline"
+                      className="bg-[#0d3486] text-white"
+                    >
+                      <IconTrendingUp />
+                      +12.5%
+                    </Badge>
+                  </CardAction>
+                </CardHeader>
+                <CardFooter className="flex-col items-start gap-1.5 text-sm">
+                  <div className="line-clamp-1 flex gap-2 font-medium">
+                    Trending up this month <IconTrendingUp className="size-4" />
+                  </div>
+                  <div className="text-muted-foreground">
+                    Visitors for the last 6 months
+                  </div>
+                </CardFooter>
+              </>
+            </CarouselItem>
+          </CarouselContent>
+        </Carousel>
       </Card>
-      <Card className="@container/card lg:max-w-[49%] w-full  my-3 border-[#0d3486]">
-        <CardHeader>
-          <CardDescription>New Customers</CardDescription>
-          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            1,234
-          </CardTitle>
-          <CardAction>
-            <Badge variant="outline" className="bg-[#0d3486] text-white">
-              <IconTrendingDown />
-              -20%
-            </Badge>
-          </CardAction>
-        </CardHeader>
-        <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
-            Down 20% this period <IconTrendingDown className="size-4" />
-          </div>
-          <div className="text-muted-foreground">
-            Acquisition needs attention
-          </div>
-        </CardFooter>
+      <Card className="@container/card lg:max-w-[24%] w-full my-3 border-[#0d3486]">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 2800,
+            }),
+          ]}
+        >
+          <CarouselContent>
+            <CarouselItem>
+              <>
+                <CardHeader>
+                  <CardDescription>Recent Proposals</CardDescription>
+                  <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+                    12 hours ago
+                  </CardTitle>
+                  <CardAction>
+                    <Badge
+                      variant="outline"
+                      className="bg-[#0d3486] text-white"
+                    >
+                      <IconTrendingUp />
+                      +12.5%
+                    </Badge>
+                  </CardAction>
+                </CardHeader>
+                <CardFooter className="flex-col items-start gap-1.5 text-sm">
+                  <div className="line-clamp-1 flex gap-2 font-medium">
+                    Trending up this month <IconTrendingUp className="size-4" />
+                  </div>
+                  <div className="text-muted-foreground">
+                    Visitors for the last 6 months
+                  </div>
+                </CardFooter>
+              </>
+            </CarouselItem>
+            <CarouselItem>
+              <>
+                <CardHeader>
+                  <CardDescription>Recent Proposals</CardDescription>
+                  <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+                    12 hours ago
+                  </CardTitle>
+                  <CardAction>
+                    <Badge
+                      variant="outline"
+                      className="bg-[#0d3486] text-white"
+                    >
+                      <IconTrendingUp />
+                      +12.5%
+                    </Badge>
+                  </CardAction>
+                </CardHeader>
+                <CardFooter className="flex-col items-start gap-1.5 text-sm">
+                  <div className="line-clamp-1 flex gap-2 font-medium">
+                    Trending up this month <IconTrendingUp className="size-4" />
+                  </div>
+                  <div className="text-muted-foreground">
+                    Visitors for the last 6 months
+                  </div>
+                </CardFooter>
+              </>
+            </CarouselItem>
+            <CarouselItem>
+              <>
+                <CardHeader>
+                  <CardDescription>Recent Proposals</CardDescription>
+                  <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+                    12 hours ago
+                  </CardTitle>
+                  <CardAction>
+                    <Badge
+                      variant="outline"
+                      className="bg-[#0d3486] text-white"
+                    >
+                      <IconTrendingUp />
+                      +12.5%
+                    </Badge>
+                  </CardAction>
+                </CardHeader>
+                <CardFooter className="flex-col items-start gap-1.5 text-sm">
+                  <div className="line-clamp-1 flex gap-2 font-medium">
+                    Trending up this month <IconTrendingUp className="size-4" />
+                  </div>
+                  <div className="text-muted-foreground">
+                    Visitors for the last 6 months
+                  </div>
+                </CardFooter>
+              </>
+            </CarouselItem>
+          </CarouselContent>
+        </Carousel>
       </Card>
-      <Card className="@container/card lg:max-w-[49%] w-full  my-3 border-[#0d3486]">
-        <CardHeader>
-          <CardDescription>Active Accounts</CardDescription>
-          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            45,678
-          </CardTitle>
-          <CardAction>
-            <Badge variant="outline" className="bg-[#0d3486] text-white">
-              <IconTrendingUp />
-              +12.5%
-            </Badge>
-          </CardAction>
-        </CardHeader>
-        <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
-            Strong user retention <IconTrendingUp className="size-4" />
-          </div>
-          <div className="text-muted-foreground">Engagement exceed targets</div>
-        </CardFooter>
+      <Card className="@container/card lg:max-w-[24%] w-full my-3 border-[#0d3486]">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 3300,
+            }),
+          ]}
+        >
+          <CarouselContent>
+            <CarouselItem>
+              <>
+                <CardHeader>
+                  <CardDescription>Recent Proposals</CardDescription>
+                  <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+                    12 hours ago
+                  </CardTitle>
+                  <CardAction>
+                    <Badge
+                      variant="outline"
+                      className="bg-[#0d3486] text-white"
+                    >
+                      <IconTrendingUp />
+                      +12.5%
+                    </Badge>
+                  </CardAction>
+                </CardHeader>
+                <CardFooter className="flex-col items-start gap-1.5 text-sm">
+                  <div className="line-clamp-1 flex gap-2 font-medium">
+                    Trending up this month <IconTrendingUp className="size-4" />
+                  </div>
+                  <div className="text-muted-foreground">
+                    Visitors for the last 6 months
+                  </div>
+                </CardFooter>
+              </>
+            </CarouselItem>
+            <CarouselItem>
+              <>
+                <CardHeader>
+                  <CardDescription>Recent Proposals</CardDescription>
+                  <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+                    12 hours ago
+                  </CardTitle>
+                  <CardAction>
+                    <Badge
+                      variant="outline"
+                      className="bg-[#0d3486] text-white"
+                    >
+                      <IconTrendingUp />
+                      +12.5%
+                    </Badge>
+                  </CardAction>
+                </CardHeader>
+                <CardFooter className="flex-col items-start gap-1.5 text-sm">
+                  <div className="line-clamp-1 flex gap-2 font-medium">
+                    Trending up this month <IconTrendingUp className="size-4" />
+                  </div>
+                  <div className="text-muted-foreground">
+                    Visitors for the last 6 months
+                  </div>
+                </CardFooter>
+              </>
+            </CarouselItem>
+            <CarouselItem>
+              <>
+                <CardHeader>
+                  <CardDescription>Recent Proposals</CardDescription>
+                  <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+                    12 hours ago
+                  </CardTitle>
+                  <CardAction>
+                    <Badge
+                      variant="outline"
+                      className="bg-[#0d3486] text-white"
+                    >
+                      <IconTrendingUp />
+                      +12.5%
+                    </Badge>
+                  </CardAction>
+                </CardHeader>
+                <CardFooter className="flex-col items-start gap-1.5 text-sm">
+                  <div className="line-clamp-1 flex gap-2 font-medium">
+                    Trending up this month <IconTrendingUp className="size-4" />
+                  </div>
+                  <div className="text-muted-foreground">
+                    Visitors for the last 6 months
+                  </div>
+                </CardFooter>
+              </>
+            </CarouselItem>
+          </CarouselContent>
+        </Carousel>
       </Card>
-      <Card className="@container/card lg:max-w-[49%] w-full  my-3  border-[#0d3486]">
-        <CardHeader>
-          <CardDescription>Growth Rate</CardDescription>
-          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            4.5%
-          </CardTitle>
-          <CardAction>
-            <Badge variant="outline" className="bg-[#0d3486] text-white">
-              <IconTrendingUp />
-              +4.5%
-            </Badge>
-          </CardAction>
-        </CardHeader>
-        <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
-            Steady performance increase <IconTrendingUp className="size-4" />
-          </div>
-          <div className="text-muted-foreground">Meets growth projections</div>
-        </CardFooter>
+      <Card className="@container/card lg:max-w-[24%] w-full my-3 border-[#0d3486]">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 2500,
+            }),
+          ]}
+        >
+          <CarouselContent>
+            <CarouselItem>
+              <>
+                <CardHeader>
+                  <CardDescription>Recent Proposals</CardDescription>
+                  <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+                    12 hours ago
+                  </CardTitle>
+                  <CardAction>
+                    <Badge
+                      variant="outline"
+                      className="bg-[#0d3486] text-white"
+                    >
+                      <IconTrendingUp />
+                      +12.5%
+                    </Badge>
+                  </CardAction>
+                </CardHeader>
+                <CardFooter className="flex-col items-start gap-1.5 text-sm">
+                  <div className="line-clamp-1 flex gap-2 font-medium">
+                    Trending up this month <IconTrendingUp className="size-4" />
+                  </div>
+                  <div className="text-muted-foreground">
+                    Visitors for the last 6 months
+                  </div>
+                </CardFooter>
+              </>
+            </CarouselItem>
+            <CarouselItem>
+              <>
+                <CardHeader>
+                  <CardDescription>Recent Proposals</CardDescription>
+                  <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+                    12 hours ago
+                  </CardTitle>
+                  <CardAction>
+                    <Badge
+                      variant="outline"
+                      className="bg-[#0d3486] text-white"
+                    >
+                      <IconTrendingUp />
+                      +12.5%
+                    </Badge>
+                  </CardAction>
+                </CardHeader>
+                <CardFooter className="flex-col items-start gap-1.5 text-sm">
+                  <div className="line-clamp-1 flex gap-2 font-medium">
+                    Trending up this month <IconTrendingUp className="size-4" />
+                  </div>
+                  <div className="text-muted-foreground">
+                    Visitors for the last 6 months
+                  </div>
+                </CardFooter>
+              </>
+            </CarouselItem>
+            <CarouselItem>
+              <>
+                <CardHeader>
+                  <CardDescription>Recent Proposals</CardDescription>
+                  <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+                    12 hours ago
+                  </CardTitle>
+                  <CardAction>
+                    <Badge
+                      variant="outline"
+                      className="bg-[#0d3486] text-white"
+                    >
+                      <IconTrendingUp />
+                      +12.5%
+                    </Badge>
+                  </CardAction>
+                </CardHeader>
+                <CardFooter className="flex-col items-start gap-1.5 text-sm">
+                  <div className="line-clamp-1 flex gap-2 font-medium">
+                    Trending up this month <IconTrendingUp className="size-4" />
+                  </div>
+                  <div className="text-muted-foreground">
+                    Visitors for the last 6 months
+                  </div>
+                </CardFooter>
+              </>
+            </CarouselItem>
+          </CarouselContent>
+        </Carousel>
       </Card>
     </div>
   );

@@ -2,7 +2,7 @@ import { ChartAreaInteractive } from "@/components/custom/chart-interactive";
 import { DataTable } from "@/components/custom/data-table";
 import { SectionCards } from "@/components/custom/section-cards";
 import { HeaderNav } from "@/components/custom/semantic-components/Header-nav";
-import data from "./dashboard/data.json";
+import data from "./(dashboard-pages)/dashboard/data.json";
 import PaymentAction from "@/components/custom/payment-section";
 
 export default function Home() {
