@@ -76,7 +76,7 @@ const swaggerOptions = {
   apis: ['./routes/*.js'], // Swagger scans your routes folder
 };
 
-const swaggerDocs = swaggerJsDoc(swaggerOptions);
+const swaggerDocs = swaggeJsDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // ------------------- Example Routes -------------------
