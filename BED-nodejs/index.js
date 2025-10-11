@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 5000;
 
 // ------------------- Middleware -------------------
 app.use(cors());
-app.use(helmet());
+//app.use(helmet());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'));
@@ -35,7 +35,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 // ------------------- MongoDB Connection -------------------
-const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/digital_mata';
+const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/';
 mongoose
   .connect(mongoUri) // options are not needed in Mongoose v8+
   .then(() => console.log('✅ MongoDB Connected'))
@@ -46,10 +46,10 @@ let mysqlPool;
 async function initMySQL() {
   try {
     mysqlPool = await mysql.createPool({
-      host: process.env.MYSQL_HOST || 'localhost',
-      user: process.env.MYSQL_USER || 'root',
-      password: process.env.MYSQL_PASSWORD || '',
-      database: process.env.MYSQL_DATABASE || 'digital_mata',
+      host: process.env.MYSQL_HOST,
+      user: process.env.MYSQL_USER,
+      password: process.env.MYSQL_PASSWORD,
+      database: process.env.MYSQL_DATABASE,
       waitForConnections: true,
       connectionLimit: 10,
       queueLimit: 0,
@@ -82,12 +82,12 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 // ------------------- Example Routes -------------------
 
 // Placeholder Login Route (MongoDB)
-app.get('/api/login/test', (req, res) => {
+app.get('/api/login/', (req, res) => {
   res.json({ message: 'Login route working!' });
 });
 
 // Placeholder Discussion Route (MySQL)
-app.get('/api/discussion/test', (req, res) => {
+app.get('/api/discussion/', (req, res) => {
   res.json({ message: 'Discussion route working!' });
 });
 
