@@ -110,7 +110,7 @@ const data = {
       items: [
         {
           title: "Profile",
-          url: "#",
+          url: "/profile",
         },
       ],
     },
