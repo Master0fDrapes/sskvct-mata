@@ -26,7 +26,7 @@ export async function login(req, res) {
     SECRET_KEY,
     { expiresIn: '2h' }
   );
-
+ 
   res.json({
     username: staticUser.username,
     role: staticUser.role,
