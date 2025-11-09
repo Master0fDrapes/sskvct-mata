@@ -18,18 +18,15 @@ export const initMySQL = async () => {
       queueLimit: 0,
     });
     console.log('✅ MySQL Connected');
-    return pool;
   } catch (err) {
     console.error('❌ MySQL Connection Error:', err);
-    process.exit(1); // exit if DB connection fails
+    process.exit(1);
   }
 };
 
 
 
 export const getPool = () => {
-  if (!pool) {
-    throw new Error('MySQL pool not initialized. Call initMySQL() first.');
-  }
+  if (!pool) throw new Error('MySQL pool not initialized. Call initMySQL() first.');
   return pool;
 };
