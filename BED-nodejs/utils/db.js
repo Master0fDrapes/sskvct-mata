@@ -25,6 +25,8 @@ export const initMySQL = async () => {
   }
 };
 
+
+
 export const getPool = () => {
   if (!pool) {
     throw new Error('MySQL pool not initialized. Call initMySQL() first.');
